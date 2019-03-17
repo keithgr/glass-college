@@ -369,7 +369,7 @@ function get_college_cards($search_key, $page_num) {
     foreach($result as $row) {
         $content .= '
         <a href="COLLEGE_PAGE.php">
-            <div class="card" style="width: 18rem;display: inline">
+            <div class="card" style="width: 18rem;display: inline-block;">
                 <div class="card-body">
                     <h5 class="card-title">'.$row['name'].'</h5>
                     <h6 class="card-subtitle mb-2 text-muted">'.$row['street'].'</h6>
