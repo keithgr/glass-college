@@ -373,7 +373,7 @@ function get_page_count($search_key) {
     $db = db_connect();
     $result = $db->query($sql);
     
-    return sizeof($result);
+    return count($result);
 } 
 
 ?>
