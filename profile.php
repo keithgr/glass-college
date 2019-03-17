@@ -104,27 +104,7 @@
 
 			<!-- Main Content -->
 
-			<div class="main_content">
-             
-<?php
-                
-                require('functions.php');
-                
-                $db = db_connect();
-                $sql = "SELECT id FROM video WHERE college_id=19075 LIMIT 10";
-                $result = $db->query($sql);
-                
-                while($row = $result->fetch_row()) {
-                    $id = $row[0];
-                    
-                    echo '
-                    <video width="320" height="240" controls>
-                        <source src="'.$id.'.mp4" type="video/mp4">
-                    </video>
-                    ';
-                }
-                
-?>        
+			<div class="main_content">       
 				<div class="main_title_container d-flex flex-column align-items-start justify-content-end">
 					<div class="main_subtitle">Siena</div>
 					<div class="main_title">Siena</div>
@@ -155,6 +135,27 @@
 			</div>
 		</div>
 <div align='center'>
+    
+<?php
+                
+                require('functions.php');
+                
+                $db = db_connect();
+                $sql = "SELECT id FROM video WHERE college_id=19075 LIMIT 10";
+                $result = $db->query($sql);
+                
+                while($row = $result->fetch_row()) {
+                    $id = $row[0];
+                    
+                    echo '
+                    <video width="320" height="240" controls>
+                        <source src="/opt/lampp/uploads/'.$id.'.mp4" type="video/mp4">
+                    </video>
+                    ';
+                }
+                
+?> 
+    
 	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
