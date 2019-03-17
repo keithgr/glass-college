@@ -70,7 +70,7 @@ $content = '
 							Don’t have an account?
 						</span>
 
-						<a class="txt2" href="index.html">
+						<a class="txt2" href="index.php">
 							Sign Up
 						</a>
 					</div>
@@ -101,6 +101,7 @@ $content = '
 </html>';
 
 session_start();
+echo $content;
 
 
 ?>
