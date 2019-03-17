@@ -342,6 +342,9 @@ function insert_values($table_name, $values) {
     }
     $sql .= ");";
     
+    echo 'asdfsdafdsfsdsfdasfdafddfsasadasfd';
+    echo $sql;
+    
     $db = db_connect();
     $result = $db->query($sql);
     $db->close();
