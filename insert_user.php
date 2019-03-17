@@ -1,5 +1,4 @@
 <?php 
-
     require('functions.php');
 
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -8,6 +7,9 @@
 
         if($name && $password){
             $db = db_connect();
+            
+            echo 'HHHELELELELKSJDHLKJDSHFKSJDFHLKSDFHLKJHLFKJDKLF';
+            
             $sql = "INSERT INTO user ('name', 'pass', 'major_id') VALUES ('$name', '$password', NULL)";
             $output = $db->query($sql);
             $db->close();
