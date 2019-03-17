@@ -369,11 +369,11 @@ function get_colleges($search_key, $page_num) {
 } 
 
 function get_page_count($search_key) {
-    $sql = "SELECT count(*) FROM college WHERE name LIKE '%$search_key%'";
+    $sql = "SELECT count(*) c FROM college WHERE name LIKE '%$search_key%'";
     $db = db_connect();
     $result = $db->query($sql);
     
-    return $result;
+    return $result[0]['c'];
 } 
 
 ?>
