@@ -148,10 +148,10 @@
                     $id = $row[0];
                     
                     echo '
+                    <p><a href="/opt/lampp/uploads/'.$id.'.mp4" download></p>
                     <video style="float: right;" width="320" height="240" controls>
                         <source src="/opt/lampp/uploads/'.$id.'.mp4" type="video/mp4">
                     </video>
-                    <a href="/opt/lampp/uploads/'.$id.'.mp4" download>
                     ';
                 }
                 
