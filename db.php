@@ -1,5 +1,8 @@
 <?
     require('functions.php');
 
-    insert_values('user', ['plz', 'edukillme', null]);
+    $pn = $_GET['page_num'];
+
+    $result = get_colleges('techincal institute', $pn);
+    echo $result;
 ?>

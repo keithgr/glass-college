@@ -350,4 +350,20 @@ function insert_values($table_name, $values) {
     $db->close();
 }
 
+function get_colleges($search_key, $page_num) {
+    $limitClause = '';
+    if($page_num == 1) {
+        $limitClause = 'LIMIT 20';
+    }
+    else {
+        $limitClause = 'LIMIT '.(($page_num - 1)*20).', '.($page_num*20 - 1);
+    }
+
+    $sql = "SELECT * FROM college WHERE name LIKE '%$search_key%' $limitClause";
+    $db = db_connect();
+    $result = $db->query($sql);
+    
+    return result;
+} 
+
 ?>
