@@ -34,7 +34,7 @@ function db_connect() {
     if ($sql->connect_errno) {
        die("Failed to connect to MySQL: ($sql->connect_errno) $sql->connect_error");
     }
-    echo "Connection successful"; //For testing
+    //echo "Connection successful"; //For testing
     return $sql;
 }
 
