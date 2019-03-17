@@ -363,7 +363,7 @@ function get_colleges($search_key, $page_num) {
     $db = db_connect();
     $result = $db->query($sql);
     
-    return result;
+    return $result;
 } 
 
 ?>
