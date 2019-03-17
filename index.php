@@ -53,11 +53,12 @@ $content = '<!DOCTYPE html>
 			</div>
 			<div class="header-right">
 				<ul class="main-menu">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="about.html">About us</a></li>
-					<li><a href="service.html">Services</a></li>
-					<li><a href="blog.html">News</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<div class="topnav">
+                        <a class="active" href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                        <input type="text" placeholder="Search..">
+                    </div>
 				</ul>
 				<div class="header-btns">
 					<a href="#" class="site-btn sb-c1">Support <span>24/7</span></a>
