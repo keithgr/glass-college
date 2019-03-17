@@ -1,50 +1,25 @@
 <?php 
 	$content = '<form action = "insert_course.php" method = "get">
 	<div class="form-group">
-		<label for="name">Year</label>
+		<label for="name">UserName</label>
 		<input type="text" class="form-control" id="year" name="name">
 	</div>
 	<div class="form-group">
-		<label for="address">Semester</label>
-		<input type="text" class="form-control" id="sem" name="address">
-	</div>
-	<div class="form-group">
-		<label for="city">Title</label>
-		<input type="text" class="form-control" id="title" name="city">
-	</div>
-	<div class="form-group">
-		<label for="state">Subject</label>
-		<input type="text" class="form-control" id="sub" name="state">
-	</div>
-	<div class="form-group">
-		<label for="zip">Number</label>
-		<input type="text" class="form-control" id="num" name="zip">
-	</div>
-	<div class="form-group">
-		<label for="fs_ratio">Userid</label>
-		<input type="text" class="form-control" id="uid" name="fs_ratio">
-	</div>
-	<div class="form-group">
-		<label for="dept">Description</label>
-		<input type="text" class="form-control" id="des" name="dept">
+		<label for="password">Password</label>
+		<input type="text" class="form-control" id="sem" name="password">
 	</div>
 	<input type="submit">
 </form>';
 
 	require('functions.php');
 	
-	$get = $_GET['get'];
-	$name = $_GET['name'];
-	$address = $_GET['address'];
-	$city = $_GET['city'];
-	$state = $_GET['state'];
-	$zip = $_GET['zip'];
-	$fratio = $_GET['fs_ratio'];
-    $dept = $_GET['dept'];
+	$get = $_POST['get'];
+	$name = $_POST['name'];
+	$password = $_POST['password'];
 	
-	if($get && $name && $address && $city && $state && $zip &&  $fratio && $dept){
+	if($get && $name && $password){
 		$db = db_connect();
-		$sql = "INSERT INTO user(get,name,address,city,state,zip,fs_ratio,dept) VALUES ('$get','$name','$address','$city','$state','$zip','$fratio','$dept')";
+		$sql = "INSERT INTO user(get,name,address,city,state,zip,fs_ratio,dept) VALUES ('$get','$name','$password')";
 		$output = $db->query($sql);
 		$db->close();
 	}
