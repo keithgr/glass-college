@@ -150,6 +150,7 @@
                     echo '
                     <video style="float: right;" width="320" height="240" controls>
                         <source src="/opt/lampp/uploads/'.$id.'.mp4" type="video/mp4">
+                        <a href="/opt/lampp/uploads/'.$id.'.mp4">link to the video</a>
                     </video>
                     ';
                 }
