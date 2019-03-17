@@ -48,14 +48,21 @@ $content = '
 						<span class="btn-show-pass">
 						</span>
 						<input class="input100" type="text" name="title">
-						<span class="focus-input100" data-placeholder="Title"></span>
+						<span class="focus-input100" data-placeholder="Video Title"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Please describe your experience">
+						<span class="btn-show-pass">
+						</span>
+						<input class="input100" type="text" name="title">
+						<span class="focus-input100" data-placeholder="Video Description"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn">
-								Login
+								Submit
 							</button>
 						</div>
 					</div>
