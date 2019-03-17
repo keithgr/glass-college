@@ -384,7 +384,7 @@ function get_page_count($search_key) {
     $sql = "SELECT count(*) FROM college WHERE name LIKE '%$search_key%'";
     $db = db_connect();
     $result = $db->query($sql);
-        if($result->fetch_row() > 100){
+        if($result->fetch_row()[0] > 100){
             return 5;
         }
     else{
