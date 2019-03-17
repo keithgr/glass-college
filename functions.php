@@ -350,7 +350,7 @@ function insert_values($table_name, $values) {
     $db->close();
 }
 
-function get_colleges($search_key, $page_num) {
+function get_college_cards($search_key, $page_num) {
     $limitClause = '';
     if($page_num == 1) {
         $limitClause = 'LIMIT 20';
@@ -365,7 +365,21 @@ function get_colleges($search_key, $page_num) {
     $db = db_connect();
     $result = $db->query($sql);
     
-    return $result;
+    $content = '';
+    foreach($result as $row) {
+        content .= '
+        <a href="COLLEGE_PAGE.php">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">'.$row['name'].'</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">'.$row['address'].'</h6>
+                </div>
+            </div>
+        </a>
+        ';
+    }
+    
+    return $content;
 } 
 
 function get_page_count($search_key) {
@@ -375,5 +389,18 @@ function get_page_count($search_key) {
         
     return ceil($result->fetch_row()[0] / 20);
 } 
+
+function generate_carousel_item($search_key) {
+    $page_count = get_page_count($search_key);
+    for ($p = 1; $p <= $page_count; $p++) {
+        echo '
+        <div class="hs-item set-bg" data-setbg="img/bg.jpg">
+            <div class="container">
+                
+            </div>
+        </div>
+        ';
+    }
+}
 
 ?>
