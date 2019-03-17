@@ -336,7 +336,10 @@ function insert_values($table_name, $values) {
     }
     $sql .= ") VALUES ('{$values[0]}'";
     for ($v = 1; $v < sizeof($values); $v++) {
-        $sql .= ", {$values[$v]}";
+        if ($values[$v] === null)
+            $sql .= ", NULL";
+        else
+            $sql .= ", '{$values[$v]}'";
     }
     $sql .= ");";
     

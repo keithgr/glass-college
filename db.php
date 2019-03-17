@@ -1,5 +1,5 @@
 <?
     require('functions.php');
 
-    insert_values('user', ['plz', 'edukillme', NULL]);
+    insert_values('user', ['plz', 'edukillme', null]);
 ?>
