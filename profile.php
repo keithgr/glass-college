@@ -106,7 +106,7 @@
 
 			<div class="main_content">
              
-<?
+<?php
                 
                 require('functions.php');
                 
@@ -114,8 +114,8 @@
                 $sql = "SELECT id FROM video WHERE college_id=19075 LIMIT 10";
                 $result = $db->query($sql);
                 
-                foreach($row = $result->fetch_assoc()) {
-                    $id = $row['id'];
+                foreach($row = $result->fetch_row()) {
+                    $id = $row[0];
                     
                     echo '
                     <video width="320" height="240" controls>
