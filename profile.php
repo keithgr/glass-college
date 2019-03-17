@@ -105,7 +105,7 @@
 			<!-- Main Content -->
 
 			<div class="main_content">
-                
+   /*             
 <?
                 require('functions.php');
                 
@@ -123,7 +123,7 @@
                     ';
                 }
 ?>
-                
+      */          
 				<div class="main_title_container d-flex flex-column align-items-start justify-content-end">
 					<div class="main_subtitle">Siena</div>
 					<div class="main_title">Siena</div>
