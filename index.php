@@ -63,8 +63,8 @@ $content = '<!DOCTYPE html>
 				</ul>
 				<div class="header-btns">
 					<a href="video_upload.php" class="site-btn sb-c1">Upload</a>
-					<a href="login.html" class="site-btn sb-c2">Login</a>
-					<a href="register.html" class="site-btn sb-c3">Register</a>
+					<a href="login.php" class="site-btn sb-c2">Login</a>
+					<a href="register.php" class="site-btn sb-c3">Register</a>
 				</div>
 			</div>
 		</div>
