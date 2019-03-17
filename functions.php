@@ -358,8 +358,6 @@ function get_college_cards($search_key, $page_num) {
     else {
         $limitClause = 'LIMIT '.(($page_num - 1)*20).', 20';
     }
-
-    echo $limitClause;
     
     $sql = "SELECT * FROM college WHERE name LIKE '%$search_key%' $limitClause";
     $db = db_connect();
@@ -386,8 +384,12 @@ function get_page_count($search_key) {
     $sql = "SELECT count(*) FROM college WHERE name LIKE '%$search_key%'";
     $db = db_connect();
     $result = $db->query($sql);
-        
-    return ceil($result->fetch_row()[0] / 20);
+        if($relsult.fetch_row() > 100){
+            return 5;
+        }
+    else{
+        return ceil($result->fetch_row()[0] / 20);
+        }
 } 
 
 function generate_carousel_items($search_key) {
