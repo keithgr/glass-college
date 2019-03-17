@@ -5,7 +5,7 @@ require('functions.php');
 $search_key = $_GET['search_key'];
 $page_number = 1;
 
-$style = '<style>card{display: inline-block}';
+$style = '<style>card{display: inline-block}</style>';
 $content = '<!DOCTYPE html>
 <html lang="zxx">
 <head>
