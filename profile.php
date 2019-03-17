@@ -107,7 +107,7 @@
 			<div class="main_content">
              
 <?
-                /*
+                
                 require('functions.php');
                 
                 $db = db_connect();
@@ -123,7 +123,7 @@
                     </video>
                     ';
                 }
-                */
+                
 ?>        
 				<div class="main_title_container d-flex flex-column align-items-start justify-content-end">
 					<div class="main_subtitle">Siena</div>
