@@ -54,7 +54,7 @@ $content = '<!DOCTYPE html>
 			<div class="header-right">
 				<ul class="main-menu">
 					<div class="topnav">
-                        <strong>Search Engine</strong><input type="text">
+                        <strong style = "color: white">Search Engine</strong><input type="text">
                     </div>
 				</ul>
 				<div class="header-btns">
