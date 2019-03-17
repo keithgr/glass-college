@@ -389,7 +389,7 @@ function get_page_count($search_key) {
             return 5;
         }
     else{
-        return ceil($result->fetch_row()[0] / 20);
+        return ceil($row / 20);
         }
 } 
 
