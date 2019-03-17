@@ -55,7 +55,14 @@ $content = '
 						<span class="btn-show-pass">
 						</span>
 						<input class="input100" type="text" name="title">
-						<span class="focus-input100" data-placeholder="Video Description"></span>
+						<span class="focus-input100" data-placeholder="Description"></span>
+					</div>
+                    
+                    <div class="wrap-input100 validate-input" data-validate="Please describe your experience">
+						<span class="btn-show-pass">
+						</span>
+						<input type="file" name="vid" accept="video/*">
+						<span class="focus-input100" data-placeholder="Video File"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
