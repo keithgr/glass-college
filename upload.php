@@ -8,8 +8,8 @@
         
         $db->query($sql);
         
-        $result = $db->query("SELECT MAX(id) FROM VIDEO");
-        $id = $result->fetch_row()[0];
+        $result = $db->query("SELECT MAX(id) FROM video");
+        $id = $result->fetch_row();
         
         $db->close();
     }
