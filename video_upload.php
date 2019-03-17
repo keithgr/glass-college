@@ -1,5 +1,14 @@
 <?php
 
+require(functions.php);
+
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $db = db_connect();
+    $sql = "INSERT INTO video (username, college_id, name, description) VALUES ('{$_SESSION['user']}', '{$_SESSION['college_id']}', '{$_POST['title']}', '{$_POST['desc']}')";
+    
+    
+}
+
 $content = '
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +44,7 @@ $content = '
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" enctype="multipart/form-data">
 					<span class="login100-form-title p-b-26">
 						Share your experience!
 					</span>
@@ -54,7 +63,7 @@ $content = '
                     <div class="wrap-input100 validate-input" data-validate="Please describe your experience">
 						<span class="btn-show-pass">
 						</span>
-						<input class="input100" type="text" name="title">
+						<input class="input100" type="text" name="desc">
 						<span class="focus-input100" data-placeholder="Description"></span>
 					</div>
                     
