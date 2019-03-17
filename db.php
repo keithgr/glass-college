@@ -4,7 +4,7 @@
     $pn = $_GET['page_num'];
 
     $result = get_colleges('technical institute', $pn);
-	$content.= '<table class = "table">';
+	$content .= '<table class = "table">';
 	while($row = $result->fetch_assoc()){
 		$content.= '<tr>';
 		foreach($row as $value){
