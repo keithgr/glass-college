@@ -356,7 +356,7 @@ function get_colleges($search_key, $page_num) {
         $limitClause = 'LIMIT 20';
     }
     else {
-        $limitClause = 'LIMIT '.(($page_num - 1)*20).', '.($page_num * 20 - 1);
+        $limitClause = 'LIMIT '.(($page_num - 1)*20).', 20';
     }
 
     echo $limitClause;
