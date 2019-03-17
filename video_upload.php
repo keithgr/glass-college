@@ -72,16 +72,6 @@ $content = '
 							</button>
 						</div>
 					</div>
-
-					<div class="text-center p-t-115">
-						<span class="txt1">
-							Don’t have an account?
-						</span>
-
-						<a class="txt2" href="index.php">
-							Sign Up
-						</a>
-					</div>
 				</form>
 			</div>
 		</div>
