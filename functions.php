@@ -385,7 +385,7 @@ function get_page_count($search_key) {
     $db = db_connect();
     $result = $db->query($sql);
     $row = $result->fetch_row()[0]; 
-        if($result->row > 100){
+        if($row > 100){
             return 5;
         }
     else{
