@@ -372,7 +372,7 @@ function get_college_cards($search_key, $page_num) {
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">'.$row['name'].'</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">'.$row['address'].'</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">'.$row['street'].'</h6>
                 </div>
             </div>
         </a>
@@ -402,6 +402,7 @@ function generate_carousel_items($search_key) {
         </div>
         ';
     }
+    return $content;
 }
 
 ?>
