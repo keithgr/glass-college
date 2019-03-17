@@ -101,6 +101,7 @@ $content = '
 </html>';
 
 session_start();
+$_SESSION['user'] = $email;
 echo $content;
 
 
