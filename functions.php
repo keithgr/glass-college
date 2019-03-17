@@ -392,8 +392,9 @@ function get_page_count($search_key) {
 
 function generate_carousel_items($search_key) {
     $page_count = get_page_count($search_key);
+    $content = '';
     for ($p = 1; $p <= $page_count; $p++) {
-        echo '
+        $content .= '
         <div class="hs-item set-bg" data-setbg="img/bg.jpg">
             <div class="container">
                 '.get_college_cards($search_key,$p).'
