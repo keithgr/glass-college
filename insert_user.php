@@ -1,5 +1,20 @@
 <?php 
-	$content = '<form action = "insert_user.php" method = "post">
+
+    require('functions.php');
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $name = $_POST['name'];
+        $password = $_POST['password'];
+
+        if($name && $password){
+            $db = db_connect();
+            $sql = "INSERT INTO user ('name', 'pass') VALUES ('$name','$password')";
+            $output = $db->query($sql);
+            $db->close();
+        }
+    }
+
+    $content = '<form action = "insert_user.php" method = "post">
 	<div class="form-group">
 		<label for="name">UserName</label>
 		<input type="text" class="form-control" id="year" name="name">
@@ -10,19 +25,6 @@
 	</div>
 	<input type="submit">
 </form>';
-
-	require('functions.php');
-	
-	$get = $_POST['get'];
-	$name = $_POST['name'];
-	$password = $_POST['password'];
-	
-	if($get && $name && $password){
-		$db = db_connect();
-		$sql = "INSERT INTO user(get,name,address,city,state,zip,fs_ratio,dept) VALUES ('$get','$name','$password')";
-		$output = $db->query($sql);
-		$db->close();
-	}
 
 	$db = db_connect();
 	$sql = "SELECT * FROM user";
@@ -37,6 +39,5 @@
 		$content.= '</tr>';
 	}
 
-	make_basic_page('Create courses table', $content);
 	$db->close();
 ?>
