@@ -7,6 +7,7 @@ $page_number = 1;
 
 $style = '<style>.card{display: inline-block;}</style>';
 $content = '<!DOCTYPE html>
+
 <html lang="zxx">
 <head>
 	<title>GlassCollege</title>
@@ -53,9 +54,12 @@ $content = '<!DOCTYPE html>
 			</div>
 			<div class="header-right">
 				<ul class="main-menu">
+                    <form action="index.php">
 					<div class="topnav">
-                        <strong style = "color: white">Search Engine</strong><input type="text">
+                        <strong style = "color: white">Search Engine</strong><input type="text" name = "search_key">
+                        <input type="submit" value = "Submit" >
                     </div>
+                    </form>
 				</ul>
 				<div class="header-btns">
 					<a href="#" class="site-btn sb-c1">Support <span>24/7</span></a>
