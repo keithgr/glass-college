@@ -7,15 +7,14 @@
         $config = parse_ini_file("/opt/lampp/config.ini");
 
         $host = $config['HOST'];
-        $port = $config['PORT'];
         $user = $config['USER'];
         $pass = $config['PASS'];
         $db = $config['DB'];
 
         // Create and verify connection
-        $sql = new mysqli($host.':'.$port, $user, $pass, $db);
+        $sql = new mysqli($host, $user, $pass, $db);
         if ($sql->connect_errno) {
-           die("Failed to connect to MySQL: ($mysqli->connect_errno) $mysqli->connect_error");
+           die("Failed to connect to MySQL: ($sql->connect_errno) $sql->connect_error");
         }
         echo "Connection successful"; //For testing
         return $sql;	
