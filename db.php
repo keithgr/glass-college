@@ -4,5 +4,5 @@
     $pn = $_GET['page_num'];
 
     $result = get_colleges('techincal institute', $pn);
-    echo $result;
+    var_dump($result);
 ?>
