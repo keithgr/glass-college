@@ -27,7 +27,7 @@
     </form>';
 
 	$db = db_connect();
-	$sql = "SELECT * FROM user";
+	$sql = "desc user";
 	$result = $db->query($sql);
 	var_dump($result);
 	$content.= '<table class = "table">';
