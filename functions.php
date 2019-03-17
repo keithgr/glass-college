@@ -372,10 +372,8 @@ function get_page_count($search_key) {
     $sql = "SELECT count(*) FROM college WHERE name LIKE '%$search_key%'";
     $db = db_connect();
     $result = $db->query($sql);
-    
-    var_dump($result);
-    
-    return $result->fetch_row()[0];
+        
+    return ($result->fetch_row()[0]) / 20 + 1;
 } 
 
 ?>
