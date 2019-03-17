@@ -46,10 +46,9 @@ $content = '
 
 					<div class="wrap-input100 validate-input" data-validate="Must enter video title">
 						<span class="btn-show-pass">
-							<i class="zmdi zmdi-eye"></i>
 						</span>
 						<input class="input100" type="text" name="title">
-						<span class="focus-input100" data-placeholder="Awesome college experience"></span>
+						<span class="focus-input100" data-placeholder="Title"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
