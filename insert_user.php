@@ -6,11 +6,8 @@
         $password = $_POST['password'];
 
         if($name && $password){
-            $db = db_connect();
-            
-            echo 'HHHELELELELKSJDHLKJDSHFKSJDFHLKSDFHLKJHLFKJDKLF';
-            
-            $sql = "INSERT INTO user ('name', 'pass', 'major_id') VALUES ('$name', '$password', NULL)";
+            $db = db_connect();            
+            $sql = "INSERT INTO user (name, pass, major_id) VALUES ('$name', '$password', NULL)";
             $output = $db->query($sql);
             $db->close();
         }
