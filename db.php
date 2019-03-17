@@ -11,7 +11,7 @@
         $user = $config['USER'];
         $pass = $config['PASS'];
         $db = $config['DB'];
-
+            
         // Create and verify connection
         $sql = new mysqli($host.':'.$port, $user, $pass, $db);
         if ($sql->connect_errno) {

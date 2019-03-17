@@ -17,21 +17,25 @@ $pages = array(	'home.php' => 'Home',
 	 Connect to database.  Return mysqli object
 ----------------------------------------------------------------------- */
 function db_connect() {
-	
-	// Connect and select project3 database
-	// mysqli(host, user, password, database_name)
-	
-	// $mysqli = new mysqli("localhost", "sienasel_proj3", "Proj32019", "sienasel_project3");
-	// $mysqli = new mysqli("localhost", "breimern_proj3", "Proj32019", "breimern_project3");
-	 
-	// Output error info if there is a connection problem
-	if ($mysqli->connect_errno) {
-	   die("Failed to connect to MySQL: ($mysqli->connect_errno) $mysqli->connect_error");
-	}
+    // Connect and select project3 database
+    // mysqli(host, user, password, database_name)
 
-	// echo "Connection successful"; //For testing
+    // Init config data
+    $config = parse_ini_file("/opt/lampp/config.ini");
 
-	return $mysqli;	
+    $host = $config['HOST'];
+    $port = $config['PORT'];
+    $user = $config['USER'];
+    $pass = $config['PASS'];
+    $db = $config['DB'];
+
+    // Create and verify connection
+    $sql = new mysqli($host.':'.$port, $user, $pass, $db);
+    if ($sql->connect_errno) {
+       die("Failed to connect to MySQL: ($sql->connect_errno) $sql->connect_error");
+    }
+    echo "Connection successful"; //For testing
+    return $sql;
 }
 
 
