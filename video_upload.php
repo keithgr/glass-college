@@ -37,30 +37,38 @@ $content = '
 			<div class="wrap-login100">
 				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-26">
-						Welcome
+						Share your experience!
 					</span>
+                    
 					<span class="login100-form-title p-b-48">
 						<img src="img/eyeGlass.png" alt="sm_logo">
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-						<input class="input100" type="text" name="email">
-						<span class="focus-input100" data-placeholder="Email"></span>
+					<div class="wrap-input100 validate-input" data-validate="Must enter video title">
+						<span class="btn-show-pass">
+						</span>
+						<input class="input100" type="text" name="title">
+						<span class="focus-input100" data-placeholder="Video Title"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
+                    <div class="wrap-input100 validate-input" data-validate="Please describe your experience">
 						<span class="btn-show-pass">
-							<i class="zmdi zmdi-eye"></i>
 						</span>
-						<input class="input100" type="password" name="pass">
-						<span class="focus-input100" data-placeholder="Password"></span>
+						<input class="input100" type="text" name="title">
+						<span class="focus-input100" data-placeholder="Description"></span>
+					</div>
+                    
+                    <div class="wrap-input100 validate-input" data-validate="Choose video">
+						<span class="btn-show-pass">
+						</span>
+						<input class="input100" type="file" name="vid" accept="video/*">
 					</div>
 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn">
-								Login
+								Submit
 							</button>
 						</div>
 					</div>
