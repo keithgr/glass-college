@@ -6,7 +6,7 @@
                 id INT AUTO_INCREMENT,
                 name VARCHAR(40),
                 primary key(id)
-            );"
+            );";
         /*
         "CREATE TABLE user (
                 name VARCHAR(15),
