@@ -72,7 +72,7 @@ $content = '<!DOCTYPE html>
 
 	<!-- Hero section -->
 	<section class="hero-section">
-		<div class="hero-slider owl-carousel style = "text-align: center">
+		<div class="hero-slider owl-carousel style = "border: right 30px;">
 			'.generate_carousel_items($search_key).'
 		</div>
 	</section>
