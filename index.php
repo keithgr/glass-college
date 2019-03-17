@@ -52,6 +52,11 @@ $content = '<!DOCTYPE html>
 				<div class="ns-bar"></div>
 			</div>
 			<div class="header-right">
+				<ul class="main-menu">
+					<div class="topnav">
+                        <input type="text" placeholder="Search..">
+                    </div>
+				</ul>
 				<div class="header-btns">
 					<a href="#" class="site-btn sb-c1">Support <span>24/7</span></a>
 					<a href="login.html" class="site-btn sb-c2">Login</a>
