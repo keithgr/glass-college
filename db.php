@@ -22,4 +22,6 @@
         echo "Connection successful"; //For testing
         return $sql;	
     }
+
+    db_connect();
 ?>
