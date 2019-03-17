@@ -390,7 +390,7 @@ function get_page_count($search_key) {
     return ceil($result->fetch_row()[0] / 20);
 } 
 
-function generate_carousel_item($search_key) {
+function generate_carousel_items($search_key) {
     $page_count = get_page_count($search_key);
     for ($p = 1; $p <= $page_count; $p++) {
         echo '
