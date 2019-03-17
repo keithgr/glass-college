@@ -2,7 +2,7 @@
 
 require('functions.php');
 
-if($_GET['upl'] === 'success') {
+if(isset($_GET['upl']) && $_GET['upl'] === 'success') {
     echo '<h1>Upload successful!</h1>';
 }
 
