@@ -367,7 +367,7 @@ function get_college_cards($search_key, $page_num) {
     
     $content = '';
     foreach($result as $row) {
-        content .= '
+        $content .= '
         <a href="COLLEGE_PAGE.php">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
