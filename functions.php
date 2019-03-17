@@ -319,9 +319,7 @@ function get_fields($table_name){
    $table = $db->query("DESC $table_name");
    $result = [];
    foreach($table as $row){
-       foreach($row as $field){
-           array_push($result, $field);
-       }
+        array_push($result, $row['field']);
    }
    $db->close();
     
@@ -342,7 +340,6 @@ function insert_values($table_name, $values) {
     }
     $sql .= ");";
     
-    echo 'asdfsdafdsfsdsfdasfdafddfsasadasfd';
     echo $sql;
     
     $db = db_connect();
