@@ -365,6 +365,19 @@ function get_college_cards($search_key, $page_num) {
     
     $content = '';
     foreach($result as $row) {
+	    if($row['name'] = 'Siena College'){
+		     $content .= '
+        <a href="profile.html">
+            <div class="card" style="width: 18rem;height: 8rem; float: left;">
+                <div class="card-body">
+                    <h5 class="card-title">'.$row['name'].'</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">'.$row['street'].'</h6>
+                </div>
+            </div>
+        </a>
+        ';
+	    }
+	    else{
         $content .= '
         <a href="COLLEGE_PAGE.php">
             <div class="card" style="width: 18rem;height: 8rem; float: left;">
@@ -375,6 +388,7 @@ function get_college_cards($search_key, $page_num) {
             </div>
         </a>
         ';
+	    }
     }
     
     return $content;
