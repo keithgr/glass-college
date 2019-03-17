@@ -1,12 +1,10 @@
 <?php
 
-require(functions.php);
+require('functions.php');
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $db = db_connect();
-    $sql = "INSERT INTO video (username, college_id, name, description) VALUES ('{$_SESSION['user']}', '{$_SESSION['college_id']}', '{$_POST['title']}', '{$_POST['desc']}')";
-    
-    
+    $sql = "INSERT INTO video (username, college_id, name, description) VALUES ('{$_SESSION['user']}', '{$_SESSION['college_id']}', '{$_POST['title']}', '{$_POST['desc']}')";  
 }
 
 $content = '
