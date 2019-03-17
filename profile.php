@@ -114,7 +114,7 @@
                 $sql = "SELECT id FROM video WHERE college_id=19075 LIMIT 10";
                 $result = $db->query($sql);
                 
-                foreach($row = $result->fetch_row()) {
+                while($row = $result->fetch_row()) {
                     $id = $row[0];
                     
                     echo '
