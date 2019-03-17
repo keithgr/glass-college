@@ -8,7 +8,7 @@
     $pass = $config['PASS'];
     $db = $config['DB'];
 
-
+    
 
     // Create and verify connection
     $conn = mysqli_connect($host.':'.$port, $user, $pass, $db);
