@@ -319,7 +319,7 @@ function get_fields($table_name){
    $table = $db->query("DESC $table_name");
    $result = [];
    foreach($table as $row){
-        array_push($result, $row['field']);
+        array_push($result, $row['Field']);
    }
    $db->close();
     
