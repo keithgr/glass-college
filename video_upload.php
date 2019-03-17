@@ -42,7 +42,7 @@ $content = '
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" enctype="multipart/form-data" action="upload.php">
+				<form class="login100-form validate-form" enctype="multipart/form-data" action="upload.php" method="post">
 					<span class="login100-form-title p-b-26">
 						Share your experience!
 					</span>
