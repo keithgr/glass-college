@@ -29,7 +29,6 @@
 	$db = db_connect();
 	$sql = "SELECT * FROM user";
 	$result = $db->query($sql);
-	var_dump($result);
 	$content.= '<table class = "table">';
 	while($row = $result->fetch_assoc()){
 		$content.= '<tr>';
@@ -40,4 +39,6 @@
 	}
 
 	$db->close();
+
+    echo $content;
 ?>
