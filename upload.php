@@ -4,12 +4,11 @@
     $id = '';
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $db = db_connect();
-        $sql = "INSERT INTO video (username, college_id, name, description) VALUES ('keith', 19075, '{$_POST['title']}', '{$_POST['desc']}')";
-        
+        $sql = "INSERT INTO video (username, college_id, name, description) VALUES ('{$_SESSION['user']}', '{$_SESSION['college_id']}', '{$_POST['title']}', '{$_POST['desc']}')";
         $db->query($sql);
         
-        $result = $db->query("SELECT MAX(id) FROM video");
-        $id = $result->fetch_row();
+        $result = $db->query("SELECT MAX(id) FROM VIDEO");
+        $id = $result->fetch_row()[0];
         
         $db->close();
     }
