@@ -1,5 +1,5 @@
 <?php 
-	$content = '<form action = "insert_course.php" method = "get">
+	$content = '<form action = "insert_course.php" method = "post">
 	<div class="form-group">
 		<label for="name">UserName</label>
 		<input type="text" class="form-control" id="year" name="name">
