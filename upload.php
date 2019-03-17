@@ -1,3 +1,4 @@
+
 <?php 
     require('functions.php');
 
@@ -19,5 +20,4 @@
     $fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
     move_uploaded_file($_FILES["vid"]["tmp_name"], $target_file)
-
 ?>
