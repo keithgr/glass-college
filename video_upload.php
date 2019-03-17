@@ -2,6 +2,10 @@
 
 require('functions.php');
 
+if($_GET['upl'] === 'success') {
+    echo '<h1>Upload successful!</h1>';
+}
+
 $content = '
 <!DOCTYPE html>
 <html lang="en">

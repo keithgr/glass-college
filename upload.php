@@ -19,5 +19,7 @@
     $target_file = $target_dir.$id.'.mp4';
     $fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-    move_uploaded_file($_FILES["vid"]["tmp_name"], $target_file)
+    move_uploaded_file($_FILES["vid"]["tmp_name"], $target_file);
+
+    header("Location: video_upload.php?upl=success");
 ?>
