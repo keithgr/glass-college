@@ -313,5 +313,38 @@ function make_courses($file_name, $format='list') {
 	return $out;
 
 }
-	
+
+function get_fields($table_name){
+   $db = db_connect();
+   $table = $db->query("DESC $table_name");
+   $result = [];
+   foreach($table as $row){
+       foreach($row as $field){
+           array_push($result, $field);
+       }
+   }
+   $db->close();
+    
+   return $result;
+}
+
+function insert_values($table_name, $values) {
+    $fields = get_fields($table_name);
+    $sql = "INSERT INTO $table_name (";
+    
+    $sql .= "{$fields[0]}";
+    for ($f = 1; $f < sizeof($fields); $f++) {
+        $sql .= ", {$fields[$f]}";
+    }
+    $sql .= ") VALUES ({$values[0]}";
+    for ($v = 1; $v < sizeof($values); $v++) {
+        $sql .= ", {$values[$v]}";
+    }
+    $sql .= ");";
+    
+    $db = db_connect();
+    $result = $db->query($sql);
+    $db->close();
+}
+
 ?>
