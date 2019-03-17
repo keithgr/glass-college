@@ -62,7 +62,7 @@ $content = '<!DOCTYPE html>
                     </form>
 				</ul>
 				<div class="header-btns">
-					<a href="#" class="site-btn sb-c1">Support <span>24/7</span></a>
+					<a href="video_upload.php" class="site-btn sb-c1">Upload</a>
 					<a href="login.html" class="site-btn sb-c2">Login</a>
 					<a href="register.html" class="site-btn sb-c3">Register</a>
 				</div>
