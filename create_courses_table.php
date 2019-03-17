@@ -1,18 +1,18 @@
 <?php
 	
 	require('functions.php');
-	
-	$sql = "CREATE TABLE ebreimer_courses (
-			cid   INT         NOT NULL AUTO_INCREMENT, 
-			sub   VARCHAR(4)  NOT NULL, 
-			num   VARCHAR(3)  NOT NULL, 
-			title VARCHAR(48) NULL, 
-			descr TEXT        NULL, 
-			year  INT         NULL, 
-			sem   VARCHAR(6)  NULL, 
-			uid   VARCHAR(10) NOT NULL, 
-			PRIMARY KEY (cid)
-		)";
+
+	$sql = "CREATE TABLE major (
+                id INT AUTO_INCREMENT,
+                name VARCHAR(40),
+                primary key(id)
+            );"
+        /*
+        "CREATE TABLE user (
+                name VARCHAR(15),
+                pass VARCHAR(65)
+		  )";
+          */
 	
 	$db = db_connect();
 		
