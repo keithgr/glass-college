@@ -53,7 +53,7 @@ $content = '
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn">
-								<input type="submit"
+						<a href="https://www.w3schools.com"><input type="submit" Subject = "submit"></a>
 							</button>
 						</div>
 					</div>
