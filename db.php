@@ -12,5 +12,5 @@
 		}
 		$content.= '</tr>';
 	}
-    echo $content;
+    echo get_page_count('technical institute');
 ?>
