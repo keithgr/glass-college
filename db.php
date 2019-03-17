@@ -8,17 +8,18 @@
     $pass = $config['PASS'];
     $db = $config['DB'];
 
-    echo $host.$port.$user.$db;
 
-    // Create and verify connection
-    $conn = mysqli_connect($host.':'.$port, $user, $pass, $db);
-    if(!$conn) {
-        die('Could not connect: '.mysql_error());
+
+    function db_connect() {
+        // Connect and select project3 database
+        // mysqli(host, user, password, database_name)
+
+        // Create and verify connection
+        $sql = new mysqli($host.':'.$port, $user, $pass, $db);
+        if ($sql->connect_errno) {
+           die("Failed to connect to MySQL: ($mysqli->connect_errno) $mysqli->connect_error");
+        }
+        echo "Connection successful"; //For testing
+        return $sql;	
     }
-    echo 'Connected successfully';
-
-
-
-    // Close connection
-    mysql_close($conn);
 ?>
