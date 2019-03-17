@@ -11,7 +11,7 @@
 
 
     // Create and verify connection
-    $conn = mysql_connect($host.':'.$port, $user, $pass, $db);
+    $conn = mysqli_connect($host.':'.$port, $user, $pass, $db);
     if(!$conn) {
         die('Could not connect: '.mysql_error());
     }
