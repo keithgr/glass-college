@@ -396,7 +396,7 @@ function generate_carousel_items($search_key) {
         echo '
         <div class="hs-item set-bg" data-setbg="img/bg.jpg">
             <div class="container">
-                
+                '.get_college_cards($search_key,$p).'
             </div>
         </div>
         ';
