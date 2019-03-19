@@ -1,2 +1,10 @@
-# hackrpi-2019
-This is our submission for HackRPI 2019
+# glass-college
+
+## Authors
+* Keith Grable
+* Yuwei Chen
+* Caleb Ryor
+* Rose Wilson
+
+## Description
+We built this project as our submission for [HackRPI 2019](https://hackrpi-2019.devpost.com/). This application is a solution to a problem regarding accessibility to education; specifically, we want to enable prospective college students to experience the colleges that they are considering, before they commit to attending it.  Our answer is to enable the college students themselves to upload videos of their experiences, in order to provide the most transparent experience possible (hence the name GlassCollege).
